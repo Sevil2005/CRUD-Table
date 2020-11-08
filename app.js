@@ -1,5 +1,6 @@
 var table = document.querySelector(".table");
-var listValue = {};
+var listValue = [];
+var i = 4;
 
 function removeItem(item){
     var element = item.parentElement.parentElement;
@@ -30,7 +31,7 @@ function updateItem(item){
     list[1].appendChild(input1);
     list[2].appendChild(input2);
     list[3].appendChild(input3);
-    listValue = {value1, value2, value3};
+    listValue = [value1, value2, value3];
     return listValue;
 }
 
@@ -64,4 +65,20 @@ function unconfirmItem(item){
     var icon1 = `<button onclick="updateItem(this)"><i class="fa fa-edit"></i></button>`;
     var icon2 = `<button onclick="removeItem(this)"><i class="fa fa-trash"></i></button>`;
     list1[4].innerHTML = icon1 + icon2;
+}
+
+function newRow(){
+    newTr = document.createElement('tr');
+    newInput = `
+        <td>${i}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <button onclick="updateItem(this)"><i class="fa fa-edit"></i></button>
+            <button onclick="removeItem(this)"><i class="fa fa-trash"></i></button>
+        </td>`
+    newTr.innerHTML = newInput;
+    table.appendChild(newTr);
+    i += 1;
 }
