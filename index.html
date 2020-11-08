@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Table</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <button>New Row</button>
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Sevil</td>
+            <td>Rasulova</td>
+            <td>sevillerasulova@</td>
+            <td>
+                <button onclick="updateItem(this)"><i class="fa fa-edit"></i></button>
+                <button onclick="removeItem(this)"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Leyla</td>
+            <td>Mustafayeva</td>
+            <td>leylamustafayeva@</td>
+            <td>
+                <button onclick="updateItem(this)"><i class="fa fa-edit"></i></button>
+                <button onclick="removeItem(this)"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Terane</td>
+            <td>Hummetova</td>
+            <td>teranehummetova@</td>
+            <td>
+                <button onclick="updateItem(this)"><i class="fa fa-edit"></i></button>
+                <button onclick="removeItem(this)"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+    </table>
+    <script src="app.js"></script>
+</body>
+</html>
