@@ -32,7 +32,6 @@ function updateItem(item){
     list[2].appendChild(input2);
     list[3].appendChild(input3);
     listValue = [value1, value2, value3];
-    return listValue;
 }
 
 function confirmItem(item){
